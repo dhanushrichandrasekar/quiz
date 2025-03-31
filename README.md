@@ -14,7 +14,7 @@
 
 ### 🏆 Result Page  
 ![Score- Low](https://github.com/dhanushrichandrasekar/Quiz/blob/689471f8d024176daf406c22ea2cc1081a98b751/makethingsHappen.png)
-![Score- Medium](https://github.com/dhanushrichandrasekar/Quiz/blob/42fe9f7871f3ad7af9b10a0006ab6ffd1c2d8ddf/tryHard.png)
+![Score- Medium](https://github.com/dhanushrichandrasekar/quiz/blob/f4a4902bf4baf641b47b674e2a793d03d456e67f/screenshots/tryHard.png)
 ![Score- High](https://github.com/dhanushrichandrasekar/quiz/blob/e77487d6d93a633f26894bcee4951c9e07796c70/screenshots/fullMarks.png)
 
 ---
