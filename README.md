@@ -90,7 +90,6 @@ To make the experience even more interactive, the quiz includes *beautiful anima
 
 ## 📂 Folder Structure  
 
-bash
 /quiz  
 │── /screenshots  
 │   ├── fullMarks.png  
@@ -105,7 +104,7 @@ bash
 │   │   ├── book.png  
 │   │   ├── br.jpg  
 │   │   ├── brown.jpg  
-│   │   ├── creativityy.png.png  
+│   │   ├── creativityy.png.png 
 │   │   ├── education.png  
 │   │   ├── librarybg.jpg  
 │   │   ├── plainbr.jpg  
@@ -117,9 +116,9 @@ bash
 │   ├── questions.html  
 │   ├── quiz.html  
 │   ├── result.html  
-│
+│  
 │── README.md  
-│── quizDemo.mp4
+│── quizDemo.mp4  
 
 ---
 
