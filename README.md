@@ -7,7 +7,7 @@
 ## 📸 Screenshots of Quiz App
 
 ### 🏠 Login Page  
-![Login Page](https://raw.githubusercontent.com/dhanushrichandrasekar/Quiz/main/loginPage.png)
+![Login Page](https://github.com/dhanushrichandrasekar/quiz/blob/f8a9e6633c2595d606770291f584f89178d76cbf/screenshots/loginPage.png)
 
 ### ❓ Quiz Questions Interface
 ![Question Page ](https://github.com/dhanushrichandrasekar/quiz/blob/71e8a150c3cbc88270cb1e8f646d11419402684f/screenshots/questionPage.png)
