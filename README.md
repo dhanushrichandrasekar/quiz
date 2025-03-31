@@ -112,7 +112,7 @@ cd quiz
 code .
 ```
 
-- Locate **`quiz.html`** inside the project folder.  
+- Locate **`quiz.html`** inside the templates folder.  
 - Open it in any web browser (Chrome, Edge, Firefox, etc.).  
 
 ---
