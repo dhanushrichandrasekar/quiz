@@ -10,7 +10,7 @@
 ![Login Page](https://raw.githubusercontent.com/dhanushrichandrasekar/Quiz/main/loginPage.png)
 
 ### ❓ Quiz Questions Interface
-![Question Page ](https://github.com/dhanushrichandrasekar/Quiz/blob/8bc54a77482483b72a4547ee38196844b5c53973/questionPage.png)
+![Question Page ](https://github.com/dhanushrichandrasekar/quiz/blob/71e8a150c3cbc88270cb1e8f646d11419402684f/screenshots/questionPage.png)
 
 ### 🏆 Result Page  
 ![Score- Low](https://github.com/dhanushrichandrasekar/quiz/blob/d6201efc6056dbeed84f257427632051be41dca2/screenshots/makethingsHappen.png)
