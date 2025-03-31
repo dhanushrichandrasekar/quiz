@@ -22,7 +22,7 @@
 ## 📸 Video of Quiz App
 
 ### 📽️ Complete Demo
-https://github.com/dhanushrichandrasekar/Quiz/blob/c5bf8d658591c307dbe8fc1ddaa6320d804b218b/quizDemo.mp4
+https://github.com/dhanushrichandrasekar/quiz/blob/084d48d530bf8fcb7bddd1154a36e8ae43c4c3d5/quizDemo.mp4
 
 ---
 
