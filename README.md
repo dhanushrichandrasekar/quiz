@@ -118,7 +118,7 @@ bash
 │   ├── quiz.html  
 │   ├── result.html  
 │
-│── README.md  
+── README.md  
 │──quizDemo.mp4
 
 ---
