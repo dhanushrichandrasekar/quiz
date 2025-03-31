@@ -88,6 +88,35 @@ To make the experience even more interactive, the quiz includes *beautiful anima
 
 ---
 
+## 🚀 How to Download & Run the Quiz  
+
+### 📥 1. Cloning the Repository  
+```bash
+# Clone the repository from GitHub
+git clone https://github.com/dhanushrichandrasekar/quiz.git
+```
+
+---
+
+### 📂 2. Navigating into the Project Folder  
+```bash
+# Move into the downloaded project folder
+cd quiz
+```
+
+---
+
+### 🏁 3. Opening the Project  
+```bash
+# Open the project folder in VS Code (optional)
+code .
+```
+
+- Locate **`quiz.html`** inside the project folder.  
+- Open it in any web browser (Chrome, Edge, Firefox, etc.).  
+
+---
+
 ## 📂 Folder Structure  
 
 /quiz  
