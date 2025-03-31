@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Result Page</title>
+    <link rel="icon" type="image/png" href="../static/images/quizicon.png">
+
+    <style>
+          *{
+ 
+ overflow: hidden;
+}
+        body {
+            background-image: url(../static/images/plainbr.jpg);
+            text-align: center;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        #sentence {
+            color: brown;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 50px;
+            opacity: 0;
+            animation: fadeIn 1.5s ease-in-out forwards;
+        }
+
+        #tryagainbut {
+            position: absolute;
+            bottom: 100px;
+            left: 70%;
+            background: linear-gradient(135deg, #f7c08a, #f2a65e);
+            font-size: 1.5rem;
+            cursor: pointer;
+            padding: 12px 20px;
+            width: 180px;
+            border: none;
+            border-radius: 8px;
+            transition: all 0.3s ease-in-out;
+            box-shadow: 4px 6px 10px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            font-weight: 600;
+            color: #fff;
+            text-transform: uppercase;
+            margin-right: 600px;
+        }
+
+        #tryagainbut:hover {
+            transform: scale(1.1);
+            background: linear-gradient(135deg, #f2a65e, #e68a3e);
+            box-shadow: 6px 8px 14px rgba(0, 0, 0, 0.3);
+            animation: pulse 0.5s infinite alternate;
+        }
+
+        table {
+            margin-left: 500px;
+            width: 700px;
+            border-collapse: collapse;
+            text-align: left;
+            opacity: 0;
+            animation: slideUp 1.5s ease-in-out forwards;
+            font-size: 30px;
+        }
+
+        img {
+            margin-top: 10px;
+        }
+        img[src="../static/images/book.png"] {
+            animation: bounce 2s infinite ease-in-out;
+        }
+
+        img:not([src="../static/images/book.png"]) {
+            animation: slideBounce 1.5s ease-out;
+        }
+
+        .score-message {
+            font-size: 35px;
+            color: #4e1609;
+            opacity: 0;
+            animation: zoomIn 1.5s ease-in-out forwards;
+            text-align: justify;
+            margin-left: 500px;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes slideUp {
+            from {
+                transform: translateY(50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes pulse {
+            from { transform: scale(1); }
+            to { transform: scale(1.05); }
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(10px); }
+        }
+
+        @keyframes zoomIn {
+            from {
+                transform: scale(0.5);
+                opacity: 0;
+            }
+            to {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+        @keyframes slideBounce {
+            0% {
+                transform: translateX(-100px);
+                opacity: 0;
+            }
+            60% {
+                transform: translateX(10px);
+                opacity: 1;
+            }
+            100% {
+                transform: translateX(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <input type="button" value="Try again" id="tryagainbut" onclick="navigateToPage()" disabled>
+    <h2 id="sentence">
+        Congratulations! You have completed your online examination successfully
+        <picture><img src="../static/images/book.png" height="90px"></picture>
+    </h2>
+
+    <script>
+        var myname = localStorage.getItem("name");
+        var myroll = localStorage.getItem("roll");
+        var countt = localStorage.getItem("count");
+
+        document.write("<div style='text-align: center;'>");
+        document.write("<table>");
+        document.write("<tr><td style='padding: 8px;'>Name:</td><td style='padding: 8px;'>" + myname + "</td></tr>");
+        document.write("<tr><td style='padding: 8px;'>Roll number:</td><td style='padding: 8px;'>" + myroll + "</td></tr>");
+        document.write("<tr><td style='padding: 8px;'>Score:</td><td style='padding: 8px;'>" + countt + "/5</td></tr>");
+        document.write("</table>");
+        document.write("</div>");
+
+        if (countt == 0) {
+            document.write("<p class='score-message'>Every setback is a setup for a comeback.<br> Keep striving!</p>");
+            document.write("<img src='../static/images/creativityy.png.png' height='200px'>");
+            document.getElementById("tryagainbut").disabled = false;
+        } else if (countt <= 3) {
+            document.write("<p class='score-message'>Every challenge is a step to greatness.<br>Believe in yourself and keep pushing!</p>");
+            document.write("<img src='../static/images/education.png' height='200px'>");
+            document.getElementById("tryagainbut").disabled = false;
+        } else {
+            document.write("<p class='score-message'>Outstanding! You achieved a perfect score!<br>Your dedication is inspiring - keep up the amazing work!</p>");
+            document.write("<img src='../static/images/applause.png' height='200px'>");
+            document.getElementById("tryagainbut").style.display = "none";
+        }
+
+        function navigateToPage() {
+            window.location.href = 'questions.html';
+        }
+    </script>    
+</body>
+</html>

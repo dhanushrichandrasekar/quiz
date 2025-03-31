@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Questions page</title>
+    <link rel="icon" type="image/png" href="../static/images/quizicon.png">
+
+    <style>
+        *{
+ 
+ overflow: hidden;
+}
+      h1 {
+        text-align: center;
+        font-size: 65px;
+        color: #540E00;
+        animation: fadeIn 1.5s ease-in-out;
+      }
+      body {
+        background-image: url(../static/images/brown.jpg);
+        background-size: cover;
+        color: black;
+        margin-left: 100px;
+        animation: fadeIn 1.5s ease-in-out;
+        position: relative;
+      }
+      img {
+        margin-top: -100px;
+        animation: fadeIn 2s ease-in-out;
+      }
+      #qnno {
+        font-size: 40px;
+        color: rgb(114, 26, 26);
+        font-weight: 500;
+        animation: slideInLeft 1s ease-in-out;
+      }
+      #qns {
+        font-size: 60px;
+        margin-left: 200px;
+        color: #2a0000;
+        animation: slideInRight 1s ease-in-out;
+      }
+      #timerDisplay {
+        text-align: center;
+        font-size: 20px;
+        color: #fff;
+       margin-left: 980px;
+        animation: fadeIn 1s ease-in-out;
+      }
+      #timerDisplay img {
+        vertical-align: middle;
+        width: 40px;
+        height: 30px;
+        margin-left: 60px;
+        margin-top: 1px;
+ 
+      }
+      #timerDisplay span {
+        vertical-align: middle;
+      }
+      .rad {
+  margin-left: 250px;
+  margin-top: 20px; 
+  margin-bottom: 20px;
+  animation: fadeIn 2s ease-in-out;
+}
+
+.optt {
+  font-size: 30px;
+  color: bisque;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+  display: inline-block;
+  margin-top: 10px;
+}
+      .optt:hover {
+        transform: scale(1.05);
+        text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.8);
+      }
+      input[type=radio] {
+        height: 2em;
+        width: 2em;
+      }
+      .buttons {
+        display: flex;
+        justify-content: center;
+        gap: 50px;
+        margin-top: 50px;
+        width: 100%;
+        padding: 20px;
+      }
+      .buttons input {
+        background: linear-gradient(135deg, #f7c08a, #f2a65e);
+        font-size: 1.5rem;
+        cursor: pointer;
+        padding: 12px 20px;
+        width: 150px;
+        border: none;
+        border-radius: 8px;
+        transition: all 0.3s ease-in-out;
+        box-shadow: 4px 6px 10px rgba(0, 0, 0, 0.2);
+        text-align: center;
+        font-weight: 600;
+        color: #fff;
+        text-transform: uppercase;
+        animation: fadeIn 1.5s ease-in-out;
+      }
+      .buttons input:hover {
+        transform: scale(1.05);
+        background: linear-gradient(135deg, #f2a65e, #e68a3e);
+        box-shadow: 6px 8px 14px rgba(0, 0, 0, 0.3);
+        animation: bounce 0.5s ease-in-out;
+      }
+      #previous:disabled,
+      #nextbt:disabled {
+        cursor: not-allowed;
+        opacity: 0.5;
+      }
+      @keyframes fadeIn {
+        from { opacity: 0; }
+        to { opacity: 1; }
+      }
+      @keyframes slideInLeft {
+        from { transform: translateX(-50px); opacity: 0; }
+        to { transform: translateX(0); opacity: 1; }
+      }
+      @keyframes slideInRight {
+        from { transform: translateX(50px); opacity: 0; }
+        to { transform: translateX(0); opacity: 1; }
+      }
+      @keyframes bounce {
+        0%, 100% { transform: scale(1); }
+        50% { transform: scale(1.1); }
+      }
+      @media screen and (max-width: 1024px) {
+        .buttons { flex-wrap: wrap; }
+        .buttons input { width: 160px; font-size: 1.5rem; }
+      }
+      @media screen and (max-width: 768px) {
+        .buttons {
+          flex-direction: column;
+          align-items: center;
+          gap: 20px;
+        }
+        .buttons input { width: 75%; font-size: 1.3rem; }
+      }
+      @media screen and (max-width: 480px) {
+        .buttons input { width: 90%; font-size: 1.2rem; }
+      }
+      #previous:disabled { cursor: not-allowed; }
+      #previous:enabled { cursor: pointer; }
+      #nextbt:disabled { cursor: not-allowed; }
+      #previous:enabled { cursor: pointer; }
+    </style>
+  </head>
+  <body>
+    <div>
+      <h1>ATTEND THE FOLLOWING QUESTIONS</h1>
+      <div id="timerDisplay">
+        <img src="../static/images/sandtime.png" alt="Sand Timer">
+        <span id="timerText">Time Left: 50 sec</span>
+      </div>
+    </div>
+    <form name="dhanushree" action="result.html" method="post">
+      <div>
+        <label id="qnno"></label>
+      </div>
+      <div>
+        <label id="qns"></label>
+      </div>
+      <div>
+        <input type="radio" name="answer" id="rad1" class="rad" value="" onclick="rad()">
+        <label for="rad1" id="opt1" class="optt" onclick="operate('opt1')"></label>
+      </div>
+      <div>
+        <input type="radio" name="answer" id="rad2" class="rad" value="" onclick="rad()">
+        <label for="rad2" id="opt2" class="optt" onclick="operate('opt2')"></label>
+      </div>
+      <div>
+        <input type="radio" name="answer" id="rad3" class="rad" value="" onclick="rad()">
+        <label for="rad3" id="opt3" class="optt" onclick="operate('opt3')"></label>
+      </div>
+      <div>
+        <input type="radio" name="answer" id="rad4" class="rad" value="" onclick="rad()">
+        <label for="rad4" id="opt4" class="optt" onclick="operate('opt4')"></label>
+      </div>
+      <div class="buttons">
+        <input type="button" value="Previous" id="previous" disabled onclick="prev()">
+        <input type="button" value="Next" id="nextbt" onclick="next()">
+        <input type="submit" id="submit" value="Submit" onclick="return sub()" style="display:none;">
+      </div>
+    </form>
+    <img src="../static/images/think.gif" height="200px">
+    
+    <script>
+      var i = 0, count = 0;
+      var overallTime = 50;
+      var overallTimer;
+      
+      var qn = [
+        {
+          "Qn": "Question 1/5 :",
+          "Question": "What is the capital city of France?",
+          "Option1": "Berlin",
+          "Option2": "Madrid",
+          "Option3": "Paris",
+          "Option4": "Rome",
+          "Correctoption": "Paris",
+          "Selectedanswer": ""
+        },
+        {
+          "Qn": "Question 2/5 :",
+          "Question": "What is the capital city of Australia?",
+          "Option1": "Sydney",
+          "Option2": "Melbourne",
+          "Option3": "Canberra",
+          "Option4": "Brisbane",
+          "Correctoption": "Canberra",
+          "Selectedanswer": ""
+        },
+        {
+          "Qn": "Question 3/5 :",
+          "Question": "Which planet is known as the 'Red Planet'?",
+          "Option1": "Earth",
+          "Option2": "Mars",
+          "Option3": "Venus",
+          "Option4": "Jupiter",
+          "Correctoption": "Mars",
+          "Selectedanswer": ""
+        },
+        {
+          "Qn": "Question 4/5 :",
+          "Question": "In which year did the Titanic sink?",
+          "Option1": "1912",
+          "Option2": "1920",
+          "Option3": "1905",
+          "Option4": "1931",
+          "Correctoption": "1912",
+          "Selectedanswer": ""
+        },
+        {
+          "Qn": "Question 5/5 :",
+          "Question": "What is the largest ocean on Earth?",
+          "Option1": "Atlantic Ocean",
+          "Option2": "Indian Ocean",
+          "Option3": "Southern Ocean",
+          "Option4": "Pacific Ocean",
+          "Correctoption": "Pacific Ocean",
+          "Selectedanswer": ""
+        }
+      ];
+      function startOverallTimer() {
+        document.getElementById("timerText").innerHTML = "Time Left: " + overallTime + " sec";
+        overallTimer = setInterval(function() {
+          overallTime--;
+          document.getElementById("timerText").innerHTML = "Time Left: " + overallTime + " sec";
+          if (overallTime <= 0) {
+            clearInterval(overallTimer);
+            for (var j = 0; j < qn.length; j++) {
+              if (qn[j].Correctoption == qn[j].Selectedanswer) {
+                count++;
+              }
+            }
+            localStorage.setItem("count", count);
+            window.location.href = "result.html";
+          }
+        }, 1000);
+      }
+
+
+      function displayQuestion() {
+        document.getElementById('qnno').innerHTML = qn[i].Qn;
+        document.getElementById('qns').innerHTML = qn[i].Question;
+        document.getElementById('opt1').innerHTML = qn[i].Option1;
+        document.getElementById('opt2').innerHTML = qn[i].Option2;
+        document.getElementById('opt3').innerHTML = qn[i].Option3;
+        document.getElementById('opt4').innerHTML = qn[i].Option4;
+        document.getElementById('rad1').value = qn[i].Option1;
+        document.getElementById('rad2').value = qn[i].Option2;
+        document.getElementById('rad3').value = qn[i].Option3;
+        document.getElementById('rad4').value = qn[i].Option4;
+        document.getElementById('rad1').checked = false;
+        document.getElementById('rad2').checked = false;
+        document.getElementById('rad3').checked = false;
+        document.getElementById('rad4').checked = false;
+        checking();
+
+        if (i === qn.length - 1) {
+          document.getElementById("nextbt").style.display = "none";
+          document.getElementById("submit").style.display = "block";
+        } else {
+          document.getElementById("nextbt").style.display = "inline-block";
+          document.getElementById("submit").style.display = "none";
+        }
+      }
+
+      function next() {
+        var selectedAnswer = dhanushree.answer.value;
+        if (selectedAnswer === "") {
+          alert("Please choose an option");
+          return false;
+        }
+        if (i < qn.length - 1) {
+          i++;
+          displayQuestion();
+          document.getElementById("previous").disabled = false;
+        }
+      }
+
+      function prev() {
+        if (i > 0) {
+          i--;
+          displayQuestion();
+          document.getElementById("previous").disabled = (i === 0);
+        }
+      }
+
+      displayQuestion();
+      startOverallTimer();
+
+      function rad() {
+        var final = dhanushree.answer.value;
+        qn[i].Selectedanswer = final;
+      }
+
+      function checking() {
+        var selectedAnswer = qn[i].Selectedanswer;
+        if (selectedAnswer === document.getElementById('rad1').value) {
+          document.getElementById('rad1').checked = true;
+        } else if (selectedAnswer === document.getElementById('rad2').value) {
+          document.getElementById('rad2').checked = true;
+        } else if (selectedAnswer === document.getElementById('rad3').value) {
+          document.getElementById('rad3').checked = true;
+        } else if (selectedAnswer === document.getElementById('rad4').value) {
+          document.getElementById('rad4').checked = true;
+        }
+      }
+
+      function operate(options) {
+        var selectedAnswer = document.getElementById(options).innerHTML;
+        dhanushree.answer.value = selectedAnswer;
+        qn[i].Selectedanswer = selectedAnswer;
+      }
+
+      function sub() {
+        if (i === qn.length - 1 && qn[i].Selectedanswer === "") {
+          alert("Please choose an option for the 5th question");
+          return false;
+        }
+        for (var j = 0; j < qn.length; j++) {
+          if (qn[j].Correctoption == qn[j].Selectedanswer) {
+            count++;
+          }
+        }
+        localStorage.setItem("count", count);
+        return confirm("Are you sure to submit?");
+      }
+    </script>
+  </body>
+</html>

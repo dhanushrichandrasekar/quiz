@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Online quiz login </title>
+  <link rel="icon" type="image/png" href="../static/images/quizicon.png">
+
+  <style>
+    *{
+ 
+      overflow: hidden;
+    }
+    body {
+      background-image: url('../static/images/librarybg.jpg');
+      font-family: 'Arial', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      margin: 0;
+      padding: 20px;
+      animation: fadeIn 1.5s ease-in-out;
+    }
+
+    .container {
+      background-color: rgba(165, 42, 42, 0.3);
+      border: 2px dashed bisque;
+      padding: 40px;
+      width: 90%;
+      max-width: 500px;
+      color: bisque;
+      border-radius: 10px;
+      text-align: center;
+      box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+      animation: slideIn 1s ease-in-out;
+    }
+    
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+      animation: popIn 1s ease-in-out;
+    }
+    
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      animation: popIn 1.2s ease-in-out;
+    }
+    
+    label {
+      font-size: 1.5rem;
+      display: block;
+      text-align: left;
+      margin-bottom: 8px;
+      animation: fadeInUp 1s ease-in-out;
+    }
+    
+    input[type="text"] {
+      width: 100%;
+      padding: 12px;
+      font-size: 1.2rem;
+      background: transparent;
+      border: 2px solid bisque;
+      border-radius: 8px;
+      color: bisque;
+      margin-bottom: 15px;
+      outline: none;
+      transition: 0.3s;
+      animation: fadeInUp 1.2s ease-in-out;
+    }
+    
+    input[type="text"]:focus {
+      border-color: bisque;
+      box-shadow: 0 0 10px rgba(255, 228, 196, 0.8);
+    }
+    
+    ::placeholder {
+      color: rgba(255, 228, 196, 0.7);
+    }
+    
+    .error {
+      color: red;
+      font-size: 1.1rem;
+      text-align: left;
+      margin-top: -8px;
+      margin-bottom: 10px;
+      height: 16px;
+      animation: fadeIn 1s ease-in-out;
+    }
+    
+    .buttons {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 20px;
+      animation: fadeInUp 1.4s ease-in-out;
+    }
+    
+    .buttons input {
+      background-color: rgb(237, 211, 181);
+      font-size: 1.6rem;
+      cursor: pointer;
+      padding: 12px 20px;
+      width: 48%;
+      border: none;
+      border-radius: 5px;
+      transition: all 0.3s ease-in-out;
+      box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.2);
+      text-align: center;
+      font-weight: 500;
+      animation: bounceIn 1.2s ease-in-out;
+    }
+    
+    .buttons input:hover {
+      background-color: rgb(250, 218, 192);
+      transform: translateY(-5px);
+      box-shadow: 0 8px 15px rgba(255, 228, 196, 0.4);
+    }
+    
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    
+    @keyframes slideIn {
+      from { transform: translateY(-30px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+    
+    @keyframes popIn {
+      0% { transform: scale(0.8); opacity: 0; }
+      100% { transform: scale(1); opacity: 1; }
+    }
+    
+    @keyframes fadeInUp {
+      from { transform: translateY(20px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+    
+    @keyframes bounceIn {
+      0% { transform: scale(0.9); opacity: 0; }
+      50% { transform: scale(1.1); opacity: 0.8; }
+      100% { transform: scale(1); opacity: 1; }
+    }
+    
+    @media (max-width: 600px) {
+      .container { padding: 30px; }
+      h1 { font-size: 2rem; }
+      h2 { font-size: 1.8rem; }
+      label { font-size: 1rem; }
+      input[type="text"] { font-size: 1rem; padding: 10px; }
+      .buttons input { font-size: 1rem; padding: 10px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>ONLINE EXAMINATION</h1>
+    <h2>LOGIN</h2>
+    <form name="ONLINE REGISTRATION FORM" onsubmit="return loginn()" action="questions.html" method="post">
+      <label for="name">Name</label>
+      <input type="text" id="name" placeholder="Enter your name" oninput="removeFocusout('innername')" onfocusout="setTimeout(() => check('name','innername','name'), 1000)">
+      <div class="error" id="innername"></div>
+      
+      <label for="roll">Roll Number</label>
+      <input type="text" id="roll" placeholder="Enter your roll number" oninput="removeFocusout('innerrollno')" onfocusout="check('roll','innerrollno','roll number')">
+      <div class="error" id="innerrollno"></div>
+      
+      <div class="buttons">
+        <input type="submit" value="Login" onclick="log()">
+        <input type="reset" value="Clear" onclick="clearr()">
+      </div>
+    </form>
+  </div>
+  
+  <script>
+    function check(inputId, labelId, displayName) {
+      var text_box = document.getElementById(inputId);
+      if (text_box.value.trim() === "") {
+        document.getElementById(labelId).innerHTML = "Please enter your " + displayName;
+      } else {
+        document.getElementById(labelId).innerHTML = "";
+      }
+    }
+    function loginn() {
+      var name = document.getElementById('name').value.trim();
+      var roll = document.getElementById('roll').value.trim();
+      if (name !== "" && roll !== "") {
+        storage();
+        return true;
+      } else {
+        alert("Please fill in all fields.");
+        return false;
+      }
+    }
+    function removeFocusout(labelId) {
+      document.getElementById(labelId).innerHTML = "";
+    }
+    function storage() {
+      localStorage.setItem("name", document.getElementById('name').value);
+      localStorage.setItem("roll", document.getElementById('roll').value);
+    }
+    function log() {
+      check('name', 'innername', 'name');
+      check('roll', 'innerrollno', 'roll number');
+    }
+    function clearr() {
+      document.getElementById("name").focus();
+    }
+  </script>
+</body>
+</html>
