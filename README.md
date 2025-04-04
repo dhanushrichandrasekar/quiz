@@ -30,10 +30,8 @@
 
 ---
 
-## 📸 Video of Quiz App
-
-### 📽️ Complete Demo
-https://github.com/dhanushrichandrasekar/quiz/blob/084d48d530bf8fcb7bddd1154a36e8ae43c4c3d5/quizDemo.mp4
+## 🎥 Video of Quiz App
+🎬 **[Watch the Website Demo](https://github.com/dhanushrichandrasekar/quiz/blob/084d48d530bf8fcb7bddd1154a36e8ae43c4c3d5/quizDemo.mp4)**
 
 ---
 
