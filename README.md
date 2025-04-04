@@ -15,6 +15,11 @@
 
 ---
 
+## 🎥 Video of Quiz App
+🎬 **[Watch the Website Demo](https://github.com/dhanushrichandrasekar/quiz/blob/084d48d530bf8fcb7bddd1154a36e8ae43c4c3d5/quizDemo.mp4)**
+
+---
+
 ## 📸 Screenshots of Quiz App
 
 ### 🏠 Login Page  
@@ -27,11 +32,6 @@
 ![Score- Low](https://github.com/dhanushrichandrasekar/quiz/blob/d6201efc6056dbeed84f257427632051be41dca2/screenshots/makethingsHappen.png)
 ![Score- Medium](https://github.com/dhanushrichandrasekar/quiz/blob/f4a4902bf4baf641b47b674e2a793d03d456e67f/screenshots/tryHard.png)
 ![Score- High](https://github.com/dhanushrichandrasekar/quiz/blob/e77487d6d93a633f26894bcee4951c9e07796c70/screenshots/fullMarks.png)
-
----
-
-## 🎥 Video of Quiz App
-🎬 **[Watch the Website Demo](https://github.com/dhanushrichandrasekar/quiz/blob/084d48d530bf8fcb7bddd1154a36e8ae43c4c3d5/quizDemo.mp4)**
 
 ---
 
